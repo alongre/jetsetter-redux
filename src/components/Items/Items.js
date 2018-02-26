@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types'
 import Item from './Item';
 import Filter from './Filter';
 
@@ -39,3 +40,9 @@ class Items extends Component {
 }
 
 export default Items;
+
+Items.PropTypes = {
+  items: PropTypes.array.isRequired,
+  toggleItem: PropTypes.func.isRequired,
+  removeItem: PropTypes.func.isRequired,
+}

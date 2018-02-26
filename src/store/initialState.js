@@ -14,4 +14,11 @@ export const initialState = [
     { value: 'Sandwich', id: uniqueId(), packed: true },
   ];
 
-export default initialState;
+export default {
+  items: initialState,
+  filter: {
+    packedItemFilter: '',
+    unpackedItemFilter: '',
+  },
+  newItemValue: '',
+}
