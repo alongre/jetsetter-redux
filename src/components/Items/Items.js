@@ -13,7 +13,7 @@ class Items extends Component {
   };
 
   render() {
-    const { title, items, onCheckOff, onRemove } = this.props;
+    const { title, items, onToggleItem, onRemoveItem } = this.props;
     const { searchTerm } = this.state;
     return (
       <section className="Items">
@@ -29,8 +29,8 @@ class Items extends Component {
           .map(item => (
             <Item
               key={item.id}
-              onCheckOff={onCheckOff}
-              onRemove={onRemove}
+              onCheckOff={onToggleItem}
+              onRemove={onRemoveItem}
               item={item}
             />
           ))}
@@ -43,6 +43,6 @@ export default Items;
 
 Items.PropTypes = {
   items: PropTypes.array.isRequired,
-  toggleItem: PropTypes.func.isRequired,
-  removeItem: PropTypes.func.isRequired,
+  onToggleItem: PropTypes.func.isRequired,
+  onRemoveItem: PropTypes.func.isRequired,
 }

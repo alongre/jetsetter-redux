@@ -1,16 +1,16 @@
-const TOGGLE_ITEM = 'COMPONENTS/ITEMS/TOGGLE_ITEM';
-const REMOVE_ITEM = 'COMPONENTS/ITEMS/REMOVE_ITEM';
+const ON_TOGGLE_ITEM = 'COMPONENTS/ITEMS/ON_TOGGLE_ITEM';
+const ON_REMOVE_ITEM = 'COMPONENTS/ITEMS/ON_REMOVE_ITEM';
 
 export const toggleItem = item => {
     return {
-        type: TOGGLE_ITEM,
+        type: ON_TOGGLE_ITEM,
         payload: item,
     }
 };
 
 export const removeItem = id => {
     return {
-        type: REMOVE_ITEM,
+        type: ON_TOGGLE_ITEM,
         payload: id,
     }
 };
