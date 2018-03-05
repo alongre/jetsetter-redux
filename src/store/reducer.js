@@ -1,14 +1,15 @@
 import { combineReducers } from 'redux';
 // import { reducer as countDown } from '../components/CountDown';
-// import { reducer as Filter } from '../components/Filter';
+import filter from '../components/Filter/data/reducer';
 // import { reducer as Item } from '../components/Item';
-import * as items from '../components/Items';
+import items from '../components/Items/data/reducer';
 // import { reducer as NewItem } from '../components/NewItem';
 
 export default combineReducers({
     // countDown,
     // Filter,
     // Item,
-    items.reducer,
+    items,
+    filter,
     // NewItem,
 })

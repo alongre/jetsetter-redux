@@ -5,7 +5,7 @@ import Items from './Items';
  
 const mapStateToProps = ({items, filter}) => {
     return {
-        items: items.filter(item => !item.packed && item.included(filter.unpackedItemFilter)),
+        items: items.filter(item => !item.packed && item.value.includes(filter.unpackedItemFilter)),
         title: 'Unpacked Items',
     }
 }

@@ -1,6 +1,6 @@
 import uniqueId  from 'lodash/uniqueId';
 
-export const initialState = [
+const items = [
     { value: 'Pants', id: uniqueId(), packed: false },
     { value: 'Jacket', id: uniqueId(), packed: false },
     { value: 'iPhone Charger', id: uniqueId(), packed: false },
@@ -15,10 +15,10 @@ export const initialState = [
   ];
 
 export default {
-  items: initialState,
+  items,
   filter: {
     packedItemFilter: '',
     unpackedItemFilter: '',
   },
-  newItemValue: '',
+  // newItemValue: '',
 }
