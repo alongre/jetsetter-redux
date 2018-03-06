@@ -9,17 +9,17 @@ const mapStateToProps = ({ filter }) => {
     }
 }
 
-// const mapDispatchToProps = (dispatch) => {
-//     return bindActionCreators({
-//         onUpdatePackedItemFilter,
-//     }, dispatch)
-// };
+const mapDispatchToProps = (dispatch) => {
+    return bindActionCreators({
+        updateFilter: onUpdatePackedItemFilter,
+    }, dispatch)
+};
 
-const mapDispatchToProps = dispatch => ({
-    updateFilter(value) {
-      dispatch(onUpdatePackedItemFilter(value));
-    },
-  });
+// const mapDispatchToProps = dispatch => ({
+//     updateFilter(value) {
+//       dispatch(onUpdatePackedItemFilter(value));
+//     },
+//   });
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(Filter);

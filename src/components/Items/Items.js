@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import Item from '../Item/Item';
-import Filter from '../Filter/Filter';
 
 class Items extends Component {
   state = {
